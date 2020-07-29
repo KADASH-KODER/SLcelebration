@@ -1,4 +1,69 @@
 
+$(document).ready(
+function(){
+ $("#giftbox").one("click" , showBox );
+   }
+)
+function showBox(){
+    
+    anime({
+        targets: '#giftcover',
+        keyframes:[
+        {translateY:-80 },
+        {translateX:80},
+        {rotateZ:90 },
+        {translateY:35 },
+        ],
+        duration:6000,
+        loop:false,
+        update:open
+        
+    })
+    
+    function open(){
+          anime({
+        delay:100,
+        targets: '#ball',
+        keyframes:[
+        {translateY:-150},
+        {translateX:40},
+        {rotateZ:90 },
+        {translateX:-80},
+        {translateY:-5 },
+        {rotateZ:0 },
+        {translateY:-200},
+        
+        {translateY:-150 },
+        {translateX:20},
+        {rotateZ:90 },
+        {translateX:-40},
+        {translateY:0 },
+        {rotateZ:0 },
+        {translateY:-200}, 
+         
+        {translateY:-150 },
+        {translateX:20},
+        {rotateZ:90 },
+        {translateX:-40},
+        {translateY:0 },
+        {rotateZ:0 },
+        {translateY:-200},
+        
+        ],
+        duration:12000,
+        loop:false,
+      
+        
+        
+    })
+        
+    }
+    
+    
+    
+}
+
+
 
 function coming(){
     $(".coming").css("display"," block");
@@ -41,6 +106,7 @@ function showHome(){
     $("#block").fadeOut(500)
     $("#birthday").fadeOut(500)
     $("#princessgift").fadeOut(500)
+    $("#celegift").fadeOut(500) 
     
 }
 
@@ -54,6 +120,7 @@ function  showAbout(){
     $("#birthday").fadeOut(500)
     $("#princessgift").fadeOut(500)
     $("#hbdp").fadeOut(500)
+     $("#celegift").fadeOut(500)  
 }
 
 
@@ -67,6 +134,7 @@ function  showWhy(){
     $("#birthday").fadeOut(500)
     $("#princessgift").fadeOut(500)
     $("#hbdp").fadeOut(500)
+    $("#celegift").fadeOut(500) 
 }
 
 
@@ -80,6 +148,7 @@ function  showSpecial(){
     $("#birthday").fadeOut(500)
     $("#princessgift").fadeOut(500)
      $("#hbdp").fadeOut(500)
+     $("#celegift").fadeOut(500)  
 }
 
 
@@ -93,7 +162,9 @@ function  showBlock(){
     $("#birthday").fadeOut(500)
     $("#princessgift").fadeOut(500)
      $("#hbdp").fadeOut(500)
+     $("#celegift").fadeOut(500) 
 }
+
 
 
 function  showBd(){
@@ -105,7 +176,7 @@ function  showBd(){
     $("#block").fadeOut(500)
     $("#birthday").fadeIn(500)
     $("#hbdp").fadeOut(500)
-    
+    $("#celegift").fadeOut(500) 
 }
 
 function  showPg(){
@@ -136,6 +207,7 @@ function displayGift(){
     $("#home").fadeOut(500)
     $("#block").fadeOut(500)
     $("#birthday").fadeOut(500)
+    $("#celegift").fadeOut(500) 
     }
         else if (p == "tree"){
     $("#hbdp").slideToggle(500)
@@ -147,12 +219,13 @@ function displayGift(){
     $("#home").fadeOut(500)
     $("#block").fadeOut(500)
     $("#birthday").fadeOut(500)
+    $("#celegift").fadeOut(500) 
     }
     
     
         if (p == "TREE"){
     $("#hbdp").slideToggle(500)
-       
+    $("#celegift").fadeOut(500)     
     $("#mainSection").fadeOut(500)
     $("#about").fadeOut(500)
     $("#why").fadeOut(500)
@@ -169,5 +242,21 @@ function displayGift(){
     }
     
 }
+
+function giftz(){
+    $("#celegift").css("overflow" , "hidden")
+    $("#celegift").fadeIn(500)
+    $("#mainSection").fadeOut(500)
+    $("#about").fadeOut(500)
+    $("#why").fadeOut(500)
+    $("#special").fadeOut(500)
+    $("#home").fadeIn(500)
+    $("#block").fadeOut(500)
+    $("#birthday").fadeOut(500)
+    $("#princessgift").fadeOut(500)
+    $("#hbdp").fadeOut(500)
+}
+
+
 
 
